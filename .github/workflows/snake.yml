@@ -1,24 +1,22 @@
-# .github/workflows/snake.yml
-name: Generate Snake
+name: 🐍 Generate GitHub Contribution Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *" # every day at midnight
+    - cron: "0 0 * * *"  # every day at midnight
   workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: Platane/snk@master
+      - name: Generate Snake SVG
+        uses: Platane/snk@v3
         with:
-          github_user_name: spookyx0
-          outputs: |
-            ./output/github-contribution-grid-snake.svg
+          github_user_name: victorio222
+          svg_out_path: dist/github-contribution-grid-snake.svg
 
-      - name: Push SVG
-        uses: EndBug/add-and-commit@v9
+      - name: Upload SVG as artifact (optional)
+        uses: actions/upload-artifact@v4
         with:
-          author_name: github-actions
-          author_email: github-actions@github.com
-          message: "generate contribution snake"
+          name: contribution-snake
+          path: dist/github-contribution-grid-snake.svg
