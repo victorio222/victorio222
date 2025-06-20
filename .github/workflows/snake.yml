@@ -2,7 +2,7 @@ name: 🐍 Generate Contribution Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Every day at midnight
+    - cron: "0 0 * * *"  # every day at midnight
   workflow_dispatch:
 
 jobs:
@@ -15,6 +15,9 @@ jobs:
           github_user_name: victorio222
           outputs: |
             ./output/github-contribution-grid-snake.svg
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Commit and Push
         uses: EndBug/add-and-commit@v9
