@@ -23,7 +23,7 @@ Currently, I'm focused on mastering **Next.js** for modern frontend experiences 
       <img src="https://komarev.com/ghpvc/?username=victorio222&label=Visitors&color=blue&style=flat-square" alt="visitor badge"/>
     </td>
     <td align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=victorio222&show_icons=true&theme=tokyonight" alt="GitHub Stats"/>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=victorio222&layout=compact&theme=tokyonight" alt="Top Languages"/>
     </td>
     <td align="center">
       <img src="https://github-readme-streak-stats.herokuapp.com?user=victorio222&theme=tokyonight" alt="GitHub Streak"/>
