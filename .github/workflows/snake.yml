@@ -2,7 +2,7 @@ name: 🐍 Generate Contribution Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # every day at midnight
   workflow_dispatch:
 
 jobs:
@@ -18,6 +18,8 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          clean: false  # ⛔ Prevents deleting output folder
 
       - name: Commit and Push
         uses: EndBug/add-and-commit@v9
